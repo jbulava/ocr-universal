@@ -15,10 +15,10 @@ $license = file_get_contents($license_file);
 				<a href="http://www.o-r-g.com/" target="_blank">O R G inc.</a>
 			</p>
 			<div class="license-container">
-				<textarea class="large"><? echo $license; ?></textarea>
+				<textarea class="large"><?= $license ?></textarea>
 			</div>
 			<div>
-				<a href="<? echo $js_back; ?>">&lt; RETURN</a>
+				<a href="<?= $js_back ?>">&lt; RETURN</a>
 			</div>
 		</div>
 	</div>

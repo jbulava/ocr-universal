@@ -20,7 +20,7 @@ if($uu->urls())
 		$ancestor = $oo->get($a);
 		$a_url.= "/".$ancestor["url"];
 		?><div class="ancestor">
-			<a href="<? echo $a_url; ?>"><? echo $ancestor["name1"]; ?></a>
+			<a href="<?= $a_url ?>"><?= $ancestor["name1"] ?></a>
 		</div><?
 	}
 	// END TODO
@@ -32,7 +32,7 @@ if($uu->urls())
 		{
 		?><div class="self-container">
 			<div class="self">
-				<a href="<? echo $browse_url; ?>"><? echo $name; ?></a>
+				<a href="<?= $browse_url ?>"><?= $name ?></a>
 			</div>
 		</div><?
 		}
@@ -46,7 +46,7 @@ if($uu->urls())
 			</div>
 			<form 
 				enctype="multipart/form-data"
-				action="<? echo $l_url; ?>"
+				action="<?= $l_url ?>"
 				method="post" 
 			>
 				<div class="form">
@@ -61,7 +61,7 @@ if($uu->urls())
 									$m = 0; 
 								$d = count($i); 
 								$t = "&nbsp;&nbsp;&nbsp;";
-							?><option value="<? echo $m; ?>"><?
+							?><option value="<?= $m ?>"><?
 								for($j=1; $j < $d; $j++)
 									echo $t;
 								if(!$m)
@@ -82,7 +82,7 @@ if($uu->urls())
 							name='cancel' 
 							type='button' 
 							value='Cancel' 
-							onClick="<? echo $js_back; ?>"
+							onClick="<?= $js_back ?>"
 						>
 						<input 
 							name='submit' 
@@ -109,7 +109,7 @@ if($uu->urls())
 		}
 		else
 		{
-		?><div>Record not linked, please <a href="<? echo $js_back; ?>">try again</a>.</div><?
+		?><div>Record not linked, please <a href="<?= $js_back ?>">try again</a>.</div><?
 		}
 	}
 	?></div>

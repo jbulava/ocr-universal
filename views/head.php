@@ -80,20 +80,20 @@ else
 ?><!DOCTYPE html>
 <html>
 	<head>
-		<title><?php echo $title; ?></title>
+		<title><?= $title ?></title>
 		<meta charset="utf-8">
 		<meta name="description" content="anglophile">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="<? echo $admin_path;?>media/icon.png">
-		<link rel="apple-touch-icon-precomposed" href="<? echo $admin_path;?>media/icon.png">
-		<link rel="stylesheet" href="<? echo $admin_path; ?>static/main.css">
+		<link rel="shortcut icon" href="<?= $admin_path ?>media/icon.png">
+		<link rel="apple-touch-icon-precomposed" href="<?= $admin_path ?>media/icon.png">
+		<link rel="stylesheet" href="<?= $admin_path ?>static/main.css">
 	</head>
 	<body>
 		<div id="page">
 			<div id="header-container">
 				<header class="centre">
 					<div id="nav">
-						<a href="<?php echo $admin_path; ?>browse"><?php echo $db_name; ?> Database</a>
+						<a href="<?= $admin_path ?>browse"><?= $db_name ?> Database</a>
 					</div>
 				</header>
 			</div>

@@ -4,18 +4,18 @@
 		if($rr->action != "update")
 		{
 		?>
-			<form action="<? echo $admin_path; ?>settings" method="post">
+			<form action="<?= $admin_path ?>settings" method="post">
 				<span>maximum # of uploads: </span>
 				<select name="uploads"><?
 					for($i = 5; $i <= 50; $i+= 5)
 					{
 						if($i == $max_uploads)
 						{
-						?><option value="<? echo $i; ?>" selected><? echo $i; ?></option><?
+						?><option value="<?= $i ?>" selected><?= $i ?></option><?
 						}
 						else
 						{
-						?><option value="<? echo $i; ?>"><? echo $i; ?></option><?
+						?><option value="<?= $i ?>"><?= $i ?></option><?
 						}
 					}
 				?></select>
@@ -31,7 +31,7 @@
 			$settings->num_uploads = $uploads;
 			$f = serialize($settings);
 			file_put_contents($settings_file, $f);
-			?><span>maximum number of uploads: <? echo $uploads; ?></span><?
+			?><span>maximum number of uploads: <?= $uploads ?></span><?
 		}
 		?></div>
 	</div>
